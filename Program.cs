@@ -29,8 +29,6 @@ namespace Assignment8
             double projectHandle, wHours, wDays, extras;
 
             Salary salary = new Salary();
-            
-
             switch (ch)
             {
                 case 1:
@@ -42,7 +40,6 @@ namespace Assignment8
                         Console.WriteLine("HR Monthly Salary: " + salary.calc_salary(wHours, wDays));
                         break;
                     }
-
                 case 2:
                     {
                         Console.Write("Enter working Hour: ");
@@ -54,7 +51,6 @@ namespace Assignment8
                         Console.WriteLine("Admin Monthly Salary: " + salary.calc_salary(wHours, wDays, projectHandle));
                         break;
                     }
-
                 case 3:
                     {
                         Console.Write("Enter working Hour: ");
@@ -68,15 +64,12 @@ namespace Assignment8
                         Console.WriteLine("Software Developers Monthly Salary: " + salary.calc_salary(wHours, wDays, projectHandle, extras));
                         break;
                     }
-
                 default:
                     {
                         Console.WriteLine("Invalid choice");
                         break;
                     }
             }
-
-            
             Console.ReadKey();
         }
     }
