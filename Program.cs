@@ -19,10 +19,56 @@ namespace Assignment8
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("***********************************");
+            Console.WriteLine("Employee Type:");
+            Console.WriteLine("1. HR");
+            Console.WriteLine("2. Admin");
+            Console.WriteLine("3. Software Developer");
+            Console.WriteLine("***********************************");
+            Console.Write("Enter choice to calculate salary: ");
+            int ch = int.Parse(Console.ReadLine());
+            double projectHandle, wHours, wDays, extras;
+
             Salary salary = new Salary();
-            Console.WriteLine("HR: "+salary.calc_salary(8,30));
-            Console.WriteLine("Admin: "+salary.calc_salary(8,30,2));
-            Console.WriteLine("Software Developer: "+salary.calc_salary(8,30,3,1));
+            Console.Write("Enter working Hour: ");
+            wHours = double.Parse(Console.ReadLine());
+            Console.Write("Enter Number Of working Days: ");
+            wDays = double.Parse(Console.ReadLine());
+
+            switch (ch)
+            {
+                case 1:
+                    {
+                        Console.WriteLine("HR Salary: " + salary.calc_salary(wHours, wDays));
+                        break;
+                    }
+
+                case 2:
+                    {
+                        Console.Write("Enter Project Handles: ");
+                        projectHandle = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Admin Salary: " + salary.calc_salary(wHours, wDays, projectHandle));
+                        break;
+                    }
+
+                case 3:
+                    {
+                        Console.Write("Enter Project Handles: ");
+                        projectHandle = double.Parse(Console.ReadLine());
+                        Console.Write("Enter Extras: ");
+                        extras = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Software Developer Salary: " + salary.calc_salary(wHours, wDays, projectHandle, extras));
+                        break;
+                    }
+
+                default:
+                    {
+                        Console.WriteLine("Invalid choice");
+                        break;
+                    }
+            }
+
+            
             Console.ReadKey();
         }
     }
