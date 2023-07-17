@@ -29,34 +29,43 @@ namespace Assignment8
             double projectHandle, wHours, wDays, extras;
 
             Salary salary = new Salary();
-            Console.Write("Enter working Hour: ");
-            wHours = double.Parse(Console.ReadLine());
-            Console.Write("Enter Number Of working Days: ");
-            wDays = double.Parse(Console.ReadLine());
+            
 
             switch (ch)
             {
                 case 1:
                     {
-                        Console.WriteLine("HR Salary: " + salary.calc_salary(wHours, wDays));
+                        Console.Write("Enter working Hour: ");
+                        wHours = double.Parse(Console.ReadLine());
+                        Console.Write("Enter working Days: ");
+                        wDays = double.Parse(Console.ReadLine());
+                        Console.WriteLine("HR Monthly Salary: " + salary.calc_salary(wHours, wDays));
                         break;
                     }
 
                 case 2:
                     {
+                        Console.Write("Enter working Hour: ");
+                        wHours = double.Parse(Console.ReadLine());
+                        Console.Write("Enter working Days: ");
+                        wDays = double.Parse(Console.ReadLine());
                         Console.Write("Enter Project Handles: ");
                         projectHandle = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Admin Salary: " + salary.calc_salary(wHours, wDays, projectHandle));
+                        Console.WriteLine("Admin Monthly Salary: " + salary.calc_salary(wHours, wDays, projectHandle));
                         break;
                     }
 
                 case 3:
                     {
+                        Console.Write("Enter working Hour: ");
+                        wHours = double.Parse(Console.ReadLine());
+                        Console.Write("Enter working Days: ");
+                        wDays = double.Parse(Console.ReadLine());
                         Console.Write("Enter Project Handles: ");
                         projectHandle = double.Parse(Console.ReadLine());
                         Console.Write("Enter Extras: ");
                         extras = double.Parse(Console.ReadLine());
-                        Console.WriteLine("Software Developer Salary: " + salary.calc_salary(wHours, wDays, projectHandle, extras));
+                        Console.WriteLine("Software Developers Monthly Salary: " + salary.calc_salary(wHours, wDays, projectHandle, extras));
                         break;
                     }
 
