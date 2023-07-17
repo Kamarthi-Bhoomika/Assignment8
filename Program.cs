@@ -20,7 +20,6 @@ namespace Assignment8
         static void Main(string[] args)
         {
             Console.WriteLine("***********************************");
-            Console.WriteLine("Employee Type:");
             Console.WriteLine("1. HR");
             Console.WriteLine("2. Admin");
             Console.WriteLine("3. Software Developer");
